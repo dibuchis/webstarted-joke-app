@@ -15,10 +15,43 @@ a,
   padding: 3px;
 }
 
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  transition: 0.4s;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.7rem;
+
+    &.button--green {
+      background-color: hsla(160, 100%, 37%, 1);
+
+      &:hover {
+        background-color: hsla(160, 100%, 37%, 0.8);
+      }
+    }
+
+    &.button--blue {
+      background-color: hsla(210, 100%, 50%, 1);
+
+      &:hover {
+        background-color: hsla(210, 100%, 50%, 0.8);
+      }
+    }
+}
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
   }
+}
+
+.favorite-jokes h4 {
+  font-size: 1rem !important;
+  line-height: 1rem !important;
 }
 
 @media (min-width: 1024px) {
@@ -29,7 +62,7 @@ a,
 
   #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
     padding: 0 2rem;
   }
 }
